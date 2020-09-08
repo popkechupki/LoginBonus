@@ -1,0 +1,26 @@
+name: CloudburstPluginTamplate
+main: net.comorevi.cp.cpt.CloudburstPluginTemplate
+version: 1.0.0
+load: POSTWORLD
+author: popkechupki
+api: ["2.0.0"]
+#depend:
+#  - FormAPI
+#soft-depend:
+#  - FormAPI
+description: "説明"
+
+commands:
+  z:
+    description: 他のサーバーへ移動する
+    aliases:
+      - z
+    usage: "/z"
+    permission: cpt.command.z
+permissions:
+  cpt:
+    children:
+      cpt.command:
+        children:
+          cpt.command.z:
+            default: true
